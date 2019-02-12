@@ -12,3 +12,6 @@ Project's requirements are the following:
 Project has been developed and tested with Python 2.x in mind.
 
 
+License
+
+Project is licensed under the terms of the MIT License (see the file LICENSE).
