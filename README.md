@@ -26,19 +26,19 @@ docker run -d -p 5672:5672 -p 15672:15672  --name rabbitmq rabbitmq
 #its working 
 
 #if you need manage images
- docker images
+docker images
  
 #if you need container status
- docker ps
+docker ps
  
 #if you need start image
- docker start imagename
+docker start imagename
  
 #if you need stop image
- docker stop imagename
+docker stop imagename
  
 #if you need restart you image
- docker restart imagename
+docker restart imagename
 
 #Let's See Project Details
 
@@ -48,14 +48,17 @@ def start_threads(thread_size,func_name):
 thread_size =  how many thread we want to create
 func_name = what is our function name
 
-we created one eksisozluk reciver
-we create one linkedin reciver
-we create one facebook reciver
-we create one instagram reciver
-we create one blanews reciver
+#we created one eksisozluk reciver
+#we create one linkedin reciver
+#we create one facebook reciver
+#we create one instagram reciver
+#we create one blanews reciver
 
-and we create how many bot work send new news us.
+#and we create how many bot work send new news us. we wrote 100.
+start_threads(100,bot)
 
+#and we wait for thread functions continou 
+wait_for_search()
 
 License
 
