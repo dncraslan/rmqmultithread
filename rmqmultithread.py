@@ -82,22 +82,22 @@ def eksisozluk_db_reciver():
         print('\n [*] Waiting for eksisozluk news.')
         channel.start_consuming()
 
-def blahaber_db_reciver():
+def blanews_db_reciver():
         connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
         channel = connection.channel()
-        channel.queue_declare(queue='blahaber')
+        channel.queue_declare(queue='blanews')
 
         def callback(ch, method, properties, body):
-                print("\n blahaber bilgisi kaydedildi = " + body)
+                print("\n blanewsbilgisi kaydedildi = " + body)
 
         channel.basic_consume(callback,
-                        queue='blahaber',
+                        queue='blanews',
                         no_ack=True)
-        print('\n [*] Waiting for blahaber news.')
+        print('\n [*] Waiting for blanews news.')
         channel.start_consuming()
 
 def bot():
-        medias = ['instagram','facebook','linkedin','eksisozluk','blahaber']
+        medias = ['instagram','facebook','linkedin','eksisozluk','blanews']
         media = random.choice(medias)
         sentence = lorem.sentence()
         rmq_sender(media,sentence)
@@ -106,7 +106,7 @@ start_threads(1,instagram_db_reciver)
 start_threads(1,facebook_db_reciver)
 start_threads(1,linkedin_db_reciver)
 start_threads(1,eksisozluk_db_reciver)
-start_threads(1,blahaber_db_reciver)
+start_threads(1,blanews_db_reciver)
 
 time.sleep(2)
 
