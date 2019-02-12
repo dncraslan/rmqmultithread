@@ -42,6 +42,7 @@ docker start imagename
 docker stop imagename
  
 #if you need restart you image
+
 docker restart imagename
 
 #Let's See Project Details
@@ -59,9 +60,11 @@ func_name = what is our function name
 #we create one blanews reciver
 
 #and we create how many bot work send new news us. we wrote 100.
+
 start_threads(100,bot)
 
-#and we wait for thread functions continou 
+#and we wait for thread functions continue 
+
 wait_for_search()
 
 License
