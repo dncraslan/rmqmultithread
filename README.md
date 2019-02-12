@@ -54,9 +54,13 @@ thread_size =  how many thread we want to create
 func_name = what is our function name
 
 #we created one eksisozluk reciver
+
 #we create one linkedin reciver
+
 #we create one facebook reciver
+
 #we create one instagram reciver
+
 #we create one blanews reciver
 
 #and we create how many bot work send new news us. we wrote 100.
