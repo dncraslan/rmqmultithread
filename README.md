@@ -26,15 +26,19 @@ docker run -d -p 5672:5672 -p 15672:15672  --name rabbitmq rabbitmq
 #its working 
 
 #if you need manage images
+
 docker images
  
 #if you need container status
+
 docker ps
  
 #if you need start image
+
 docker start imagename
  
 #if you need stop image
+
 docker stop imagename
  
 #if you need restart you image
